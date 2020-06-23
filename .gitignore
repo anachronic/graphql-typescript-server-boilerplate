@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+
+build
+.development.env
+.prod.env
+
+!src/entities/.gitkeep
+!src/migrations/.gitkeep
+!src/subscribers/.gitkeep
