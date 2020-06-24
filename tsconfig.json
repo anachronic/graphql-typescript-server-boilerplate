@@ -15,6 +15,6 @@
     "outDir": "./build",
     "lib": ["es5", "es6", "es2018"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "env.config.js"],
   "exclude": ["node_modules"]
 }
