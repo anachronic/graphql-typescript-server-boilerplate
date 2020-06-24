@@ -8,3 +8,4 @@ build
 !src/entities/.gitkeep
 !src/migrations/.gitkeep
 !src/subscribers/.gitkeep
+!src/resolvers/.gitkeep
