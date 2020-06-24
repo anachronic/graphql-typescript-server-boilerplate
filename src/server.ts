@@ -1,13 +1,12 @@
 import 'reflect-metadata'
 import express from 'express'
-import dotenv from 'dotenv'
 import { createConnection } from 'typeorm'
+import resolvers from './resolvers'
+import { buildSchema } from 'type-graphql'
+import { ApolloServer } from 'apollo-server-express'
+import '../env.config'
 
 async function main() {
-  dotenv.config({ path: '.prod.env' })
-  dotenv.config({ path: '.development.env' })
-  dotenv.config({ path: '.default.env' })
-
   const port = process.env.EXPRESS_PORT
 
   const app = express()
