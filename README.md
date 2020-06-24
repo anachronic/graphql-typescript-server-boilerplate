@@ -52,3 +52,27 @@ $ yarn start:production # This one does not pick up env variables
 ## Testing
 
 To be documented
+
+## Debugging
+
+The development app runs with `--inspect` enabled so that anyone can debug it. At the time, I've only tried vscode for this. I decided against committing the file because not everyone may use it.
+
+For VSCode, here's a snippet for `.vscode/launch.json`.
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "debug",
+      "processId": "${command:PickProcess}",
+      "restart": true,
+      "protocol": "inspector"
+    }
+  ]
+}
+```
+
+That should allow you to get a debugger instantly.
