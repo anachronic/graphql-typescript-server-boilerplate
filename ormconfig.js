@@ -1,5 +1,7 @@
 const { SnakeNamingStrategy } = require('typeorm-naming-strategies')
 
+const env = process.env.NODE_ENV === 'production' ? '' : 'src/'
+
 module.exports = {
   type: 'postgres',
   host: process.env.DATABASE_HOST,
@@ -10,9 +12,9 @@ module.exports = {
   namingStrategy: new SnakeNamingStrategy(),
   synchronize: false,
   logging: process.env.NODE_ENV !== 'production',
-  entities: ['src/entities/**/*.ts'],
-  migrations: ['src/migrations/**/*.ts'],
-  subscribers: ['src/subscribers/**/*.ts'],
+  entities: [`${env}entities/**/*.{ts,js}`],
+  migrations: [`${env}migrations/**/*.{ts,js}`],
+  subscribers: [`${env}subscribers/**/*.{ts,js}`],
   migrationsTableName: 'typeorm_migrations',
   cli: {
     entitiesDir: 'src/entities',
