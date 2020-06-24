@@ -1,12 +1,13 @@
 import { createConnection, Connection } from 'typeorm'
+import Logger from 'bunyan'
 
-export async function setupDatabase(): Promise<Connection> {
+export async function setupDatabase(logger: Logger): Promise<Connection> {
   try {
     const connection = await createConnection()
-    console.log('Database is fine')
+    logger.info('Database is fine')
     return connection
   } catch (err) {
-    console.error('Database is not fine')
+    logger.error('Database is not fine')
     throw err
   }
 }
