@@ -5,6 +5,8 @@ build
 .development.env
 .prod.env
 
+yarn-error.log
+
 !src/entities/.gitkeep
 !src/migrations/.gitkeep
 !src/subscribers/.gitkeep
