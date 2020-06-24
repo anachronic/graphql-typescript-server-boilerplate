@@ -30,3 +30,25 @@ $ yarn start
 ```
 
 ## Building
+
+You can build your app using the `build` script.
+
+```
+$ yarn build
+```
+
+This will **delete** your `build` folder and regenerate it. The result build
+should be ready for production as is. Note that it will **not** pick up your
+`.env` files. You shouldn't do that anyway. Just use docker or any kind of
+decent service that can inject env variables for you in production.
+
+There's a script that runs your server, it's called `start:production`
+
+```
+$ yarn build
+$ yarn start:production # This one does not pick up env variables
+```
+
+## Testing
+
+To be documented
