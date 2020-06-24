@@ -18,5 +18,5 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ['build/**/*.js'],
+  ignorePatterns: ['build/**/*.js', 'node_modules/**/*'],
 }
