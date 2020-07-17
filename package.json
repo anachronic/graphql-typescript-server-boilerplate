@@ -31,6 +31,7 @@
     "@types/bunyan": "^1.8.6",
     "@types/express": "^4.17.6",
     "@types/graphql": "^14.5.0",
+    "@types/jest": "^26.0.4",
     "@types/morgan": "^1.9.1",
     "@types/node": "^14.0.13",
     "@typescript-eslint/eslint-plugin": "^3.4.0",
@@ -40,9 +41,12 @@
     "eslint": "^7.3.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.1.0",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
-    "ts-node": "^8.10.2"
+    "ts-jest": "^26.1.2",
+    "ts-node": "^8.10.2",
+    "typeorm-test-transactions": "^1.11.1"
   }
 }
